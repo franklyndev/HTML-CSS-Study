@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    <picture> <!--Imagem Dinamica--> 
+        <!--Devem ser organizadas por tamanho, então a imagem P não pode ser escrita embaixo de imagem M, tem uma hieraquia, senão o código em pega-->
+        <source media="(max-width: 700px)" srcset="imagens/P.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="imagens/M.png" type="image/png">
+        <img src="imagens/G.png" alt="Foto Flexível">
+    </picture>
+    <hr>
+    <h2>Adicionando Audios</h2>
+    <p>Vamos aprender a reproduzir audio em HTML</p>
+    <ol>
+        <li>Forma
+        <p>bem-te-vi</p>
+        <audio src="midia/bem-te-vi.mp3" controls loop></audio> <!--Adicionar Audio em HTML-->
+        <li>Forma
+        <audio preload="metadata" controls>
+            <source src="midia/bem-te-vi.mp3" type="audio/mpeg">
+            <source src="midia/bem-te-vi.mp3" type="audio/ogg">
+            <source src="midia/bem-te-vi.mp3" type="audio/wav">
+            <p>Infelizmente seu navegador não consegue reproduziresse audio <a href="midia/bem-te-vi.mp3">clique aqui para baixa-lo</a></p>
+            <!--Todos esses casos são pra quando seu arquivo não funciona no navegador de jeito nenhum, ele tenta rodar em outros formatos de audio, e se não conseguir em nenhum aparece a mensagem do <p>-->
+        </audio>
+    </ol>
+
+</body>
+</html>
